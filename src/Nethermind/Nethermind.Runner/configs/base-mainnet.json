@@ -2,7 +2,7 @@
   "Init": {
     "IsMining": true,
     "ChainSpecPath": "chainspec/base-mainnet.json",
-    "GenesisHash": "0x605780fd8ae4173548bff9c5ffee122392d920a7ea2836ddbf24dc3d1b96a98c",
+    "GenesisHash": "0x9c6c3dfb87ff58bcde0322af29d3b23ec73d6dddb314e0fe153c6a8923894941",
     "BaseDbPath": "nethermind_db/base-mainnet",
     "LogFileName": "base-mainnet.logs.txt",
     "DisableGcOnNewPayload": false
@@ -10,22 +10,41 @@
   "TxPool": {
     "BlobsSupport": "Disabled"
   },
-  "Sync": {
-    "FastSync": true,
-    "SnapSync": true,
-    "FastSyncCatchUpHeightDelta": "10000000000",
-    "PivotNumber": 21280000,
-    "PivotHash": "0x33979943a400ae2b6ddc0f2185a3778c5cda0176eb8708573938747eebf74b1a",
-    "PivotTotalDifficulty": "0"
+  "Aura": {
+    "AllowAuRaPrivateChains": true,
+    "ForceSealing": true
   },
-  "Discovery": {
-    "DiscoveryVersion": "V5"
+  "Sync": {
+    "NetworkingEnabled": false,
+    "SynchronizationEnabled": false
   },
   "JsonRpc": {
     "Enabled": true,
     "Host": "0.0.0.0",
     "Port": 8545,
-    "EnginePort": 8551
+    "EnginePort": 8551,
+    "EnabledModules": [
+      "Admin",
+      "Clique",
+      "Consensus",
+      "Db",
+      "Debug",
+      "Deposit",
+      "Erc20",
+      "Eth",
+      "Evm",
+      "Health",
+      "Net",
+      "Nft",
+      "Parity",
+      "Personal",
+      "Proof",
+      "Subscribe",
+      "Trace",
+      "TxPool",
+      "Vault",
+      "Web3"
+    ]
   },
   "Pruning": {
     "PruningBoundary": 192

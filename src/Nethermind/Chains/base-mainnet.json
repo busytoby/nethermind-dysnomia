@@ -6,9 +6,10 @@
         "stepDuration": 2,
         "validators": {
           "list": [
-		"0x65318e6822d84A556D350Bde46D695712Ac2c93D",
-		"0x2358B9d8111a0544C79A2Ba53436078eF887c547"
-	  ]
+            "0x65318e6822d84A556D350Bde46D695712Ac2c93D",
+            "0x2358B9d8111a0544C79A2Ba53436078eF887c547",
+            "0x827c7bd7243d6e0ddb80ba42cde3370210144e86"
+          ]
         }
       }
     }
@@ -17,28 +18,34 @@
     "maximumExtraDataSize": "0x20",
     "networkID": 1111111,
     "eip140Transition": "0x0",
+    "eip145Transition": "0x0",
+    "eip150Transition": "0x0",
+    "eip155Transition": "0x0",
+    "eip160Transition": "0x0",
+    "eip161abcTransition": "0x0",
+    "eip161dTransition": "0x0",
     "eip211Transition": "0x0",
     "eip214Transition": "0x0",
     "eip658Transition": "0x0",
-    "eip145Transition": "0x0",
     "eip1014Transition": "0x0",
     "eip1052Transition": "0x0",
+    "eip1283Transition": "0x0",
+    "eip1283DisableTransition": "0x0",
     "eip152Transition": "0x0",
     "eip1108Transition": "0x0",
-    "eip1283Transition": "0x0",
     "eip1344Transition": "0x0",
-    "eip1706Transition": "0x0",
     "eip1884Transition": "0x0",
     "eip2028Transition": "0x0",
+    "eip2200Transition": "0x0",
+    "eip2315Transition": "0x0",
+    "eip2537Transition": "0x0",
     "eip2565Transition": "0x0",
     "eip2929Transition": "0x0",
     "eip2930Transition": "0x0",
+    "eip1559Transition": "0x0",
     "eip3198Transition": "0x0",
     "eip3529Transition": "0x0",
-    "eip3541Transition": "0x0",
-    "eip1559Transition": "0x0",
-    "feeCollector": "0x7a20189B297343CF26d8548764b04891f37F3414",
-    "eip1559FeeCollectorTransition": "0x0"
+    "eip3541Transition": "0x0"
   },
   "genesis": {
     "seal": {
@@ -48,7 +55,10 @@
       }
     },
     "difficulty": "0x01",
-    "baseFeePerGas": "0x3b9aca00",
+    "author": "0x0000000000000000000000000000000000000000",
+    "timestamp": "0x00",
+    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "gasLimit": "0x1112be2"
   },
   "accounts": {
