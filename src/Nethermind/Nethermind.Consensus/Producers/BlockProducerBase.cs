@@ -137,7 +137,7 @@ namespace Nethermind.Consensus.Producers
                     Block? processedBlock = ProcessPreparedBlock(block, blockTracer);
                     if (processedBlock is null)
                     {
-                        if (Logger.IsError) Logger.Error("Block prepared by block producer was rejected by processor.");
+                        //if (Logger.IsError) Logger.Error("Block prepared by block producer was rejected by processor.");
                         Metrics.FailedBlockSeals++;
                     }
                     else
