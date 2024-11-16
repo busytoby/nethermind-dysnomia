@@ -21,11 +21,15 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Nethermind.Api;
 using Nethermind.Config;
+using Nethermind.Consensus;
 using Nethermind.Core.Authentication;
+using Nethermind.Core.Crypto;
 using Nethermind.Core.Resettables;
+using Nethermind.Facade.Eth.RpcTransaction;
 using Nethermind.HealthChecks;
 using Nethermind.JsonRpc;
 using Nethermind.JsonRpc.Modules;
+using Nethermind.JsonRpc.Modules.Eth;
 using Nethermind.Logging;
 using Nethermind.Serialization.Json;
 using Nethermind.Sockets;
@@ -97,7 +101,7 @@ public class Startup
         IJsonRpcUrlCollection jsonRpcUrlCollection = app.ApplicationServices.GetRequiredService<IJsonRpcUrlCollection>();
         IHealthChecksConfig healthChecksConfig = configProvider.GetConfig<IHealthChecksConfig>();
 
-        if (initConfig.WebSocketsEnabled)
+        if(initConfig.WebSocketsEnabled)
         {
             app.UseWebSockets(new WebSocketOptions());
             app.UseWhen(ctx =>
@@ -132,6 +136,20 @@ public class Startup
 
         app.Run(async ctx =>
         {
+            int i = 99;
+            i += 1;
+
+            logger.Info("New Connection From: " + ctx.Connection.RemoteIpAddress);
+
+            //Nethermind.JsonRpc.Modules.Eth.EthRpcModule
+
+            //IEthRpcModule? ierpcm = app.ApplicationServices.GetService<IConfigProvider>();
+
+
+            //Task<ResultWrapper<Hash256>> eth_sendTransaction([JsonRpcParameter(ExampleValue = "[{\"From\": \"0xc2208fe87805279b03c1a8a78d7ee4bfdb0e48ee\", \"Gas\":\"21000\",\"GasPrice\":\"20000000000\", \"Nonce\":\"23794\", \"To\":\"0x2d44c0e097f6cd0f514edac633d82e01280b4a5c\"}]")] TransactionForRpc rpcTx);
+
+
+
             var method = ctx.Request.Method;
             if (method is not "POST" and not "GET")
             {
@@ -167,6 +185,9 @@ public class Startup
                 try
                 {
                     using JsonRpcContext jsonRpcContext = JsonRpcContext.Http(jsonRpcUrl);
+                    i++;
+                    //Nethermind.JsonRpc.Client.BasicJsonRpcClient _r = new(urlSigner, _nethermindApi!.EthereumJsonSerializer, _nethermindApi.LogManager, TimeSpan.FromSeconds(10));
+                    //Task<ResultWrapper<Hash256>> eth_sendTransaction([JsonRpcParameter(ExampleValue = "[{\"From\": \"0xc2208fe87805279b03c1a8a78d7ee4bfdb0e48ee\", \"Gas\":\"21000\",\"GasPrice\":\"20000000000\", \"Nonce\":\"23794\", \"To\":\"0x2d44c0e097f6cd0f514edac633d82e01280b4a5c\"}]")] TransactionForRpc rpcTx);
                     await foreach (JsonRpcResult result in jsonRpcProcessor.ProcessAsync(request, jsonRpcContext))
                     {
                         using (result)
