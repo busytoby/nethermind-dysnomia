@@ -2,10 +2,8 @@
   "Init": {
     "IsMining": true,
     "ChainSpecPath": "chainspec/base-mainnet.json",
-    "GenesisHash": "0x9c6c3dfb87ff58bcde0322af29d3b23ec73d6dddb314e0fe153c6a8923894941",
     "BaseDbPath": "nethermind_db/base-mainnet",
-    "LogFileName": "base-mainnet.logs.txt",
-    "DisableGcOnNewPayload": false
+    "LogFileName": "base-mainnet.logs.txt"
   },
   "TxPool": {
     "BlobsSupport": "Disabled"
@@ -23,27 +21,8 @@
     "Host": "0.0.0.0",
     "Port": 8545,
     "EnginePort": 8551,
-    "EnabledModules": [
-      "Admin",
-      "Clique",
-      "Consensus",
-      "Db",
-      "Debug",
-      "Deposit",
-      "Erc20",
-      "Eth",
-      "Evm",
-      "Health",
-      "Net",
-      "Nft",
-      "Parity",
-      "Personal",
-      "Proof",
-      "Subscribe",
-      "Trace",
-      "TxPool",
-      "Vault",
-      "Web3"
+    "EnabledModules": ["Admin", "Clique", "Consensus", "Db", "Debug", "Deposit", "Erc20", "Eth", "Evm",
+      "Health", "Net", "Parity", "Personal", "Proof", "Subscribe", "Trace", "TxPool", "Vault", "Web3"
     ]
   },
   "Pruning": {
@@ -51,6 +30,7 @@
   },
   "Blocks": {
     "SecondsPerSlot": 2,
+    "BlockProductionTimeoutMs": 1000,
     "TargetBlockGasLimit": 97500000
   },
   "Mining": {
