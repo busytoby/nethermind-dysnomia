@@ -55,7 +55,8 @@
     "eip7702TransitionTimestamp": "0x0",
     "eip7692TransitionTimestamp": "0x0",
     "maxCodeSize": "0x6000",
-    "maxCodeSizeTransition": "0x0"
+    "maxCodeSizeTransition": "0x0",
+    "MergeForkIdTransition": "0x0"
   },
   "genesis": {
     "seal": {
