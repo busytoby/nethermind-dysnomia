@@ -5,7 +5,7 @@ namespace Nethermind.Blockchain.Services
 {
     public static class HealthHintConstants
     {
-        public const int ProcessingSafetyMultiplier = 4;
+        public const int ProcessingSafetyMultiplier = 2;
 
         public static ulong? InfinityHint = null;
 

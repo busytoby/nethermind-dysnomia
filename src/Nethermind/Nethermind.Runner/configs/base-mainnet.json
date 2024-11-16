@@ -10,7 +10,7 @@
   },
   "Aura": {
     "AllowAuRaPrivateChains": true,
-    "ForceSealing": true
+    "ForceSealing": false
   },
   "Sync": {
     "NetworkingEnabled": false,
@@ -23,14 +23,13 @@
     "EnginePort": 8551,
     "EnabledModules": ["Admin", "Clique", "Consensus", "Db", "Debug", "Deposit", "Erc20", "Eth", "Evm",
       "Health", "Net", "Parity", "Personal", "Proof", "Subscribe", "Trace", "TxPool", "Vault", "Web3"
-    ]
-  },
+    ] },
   "Pruning": {
     "PruningBoundary": 192
   },
   "Blocks": {
-    "SecondsPerSlot": 2,
-    "BlockProductionTimeoutMs": 1000,
+    "SecondsPerSlot": 1,
+    "BlockProductionTimeoutMs": 400,
     "TargetBlockGasLimit": 97500000
   },
   "Mining": {

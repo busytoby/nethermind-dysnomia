@@ -83,6 +83,29 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </None>
     <None Remove="keystore\**" />
+    <Content Remove="..\Chains\AuRaTest.json" />
+    <Content Remove="..\Chains\base-sepolia.json" />
+    <Content Remove="..\Chains\chiado.json" />
+    <Content Remove="..\Chains\energyweb.json" />
+    <Content Remove="..\Chains\exosama.json" />
+    <Content Remove="..\Chains\foundation.json" />
+    <Content Remove="..\Chains\genesis.json" />
+    <Content Remove="..\Chains\gnosis.json" />
+    <Content Remove="..\Chains\hive.json" />
+    <Content Remove="..\Chains\holesky.json" />
+    <Content Remove="..\Chains\joc-mainnet.json" />
+    <Content Remove="..\Chains\joc-testnet.json" />
+    <Content Remove="..\Chains\linea-mainnet.json" />
+    <Content Remove="..\Chains\linea-sepolia.json" />
+    <Content Remove="..\Chains\mekong.json" />
+    <Content Remove="..\Chains\op-mainnet.json" />
+    <Content Remove="..\Chains\op-sepolia.json" />
+    <Content Remove="..\Chains\poacore.json" />
+    <Content Remove="..\Chains\sepolia.json" />
+    <Content Remove="..\Chains\spaceneth.json" />
+    <Content Remove="..\Chains\taiko-hekla.json" />
+    <Content Remove="..\Chains\taiko-mainnet.json" />
+    <Content Remove="..\Chains\volta.json" />
     <Content Remove="configs\mekong.json" />
     <Content Remove="configs\mekong_archive.json" />
     <None Update="NLog.config">
