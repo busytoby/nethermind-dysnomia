@@ -404,3 +404,4 @@ FodyWeavers.xsd
 ## Nethermind
 keystore/
 /.githooks
+/src/Nethermind/Nethermind.Cli/cli.cmd.history

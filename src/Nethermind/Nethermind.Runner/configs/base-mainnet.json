@@ -6,7 +6,7 @@
     "LogFileName": "base-mainnet.logs.txt"
   },
   "TxPool": {
-    "BlobsSupport": "Disabled"
+    "BlobsSupport": "StorageWithReorgs"
   },
   "Aura": {
     "AllowAuRaPrivateChains": true,
@@ -37,6 +37,6 @@
     "Enabled": true
   },
   "Merge": {
-    "Enabled": false
+    "Enabled": true
   }
 }
